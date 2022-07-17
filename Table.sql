@@ -21,20 +21,19 @@ CREATE TABLE Assessment(
 )
 
 
-
 CREATE TABLE Student_Assessment(
 	StudentID VARCHAR(10) FOREIGN KEY REFERENCES Student(StudentID),
-	AssessmentID VARCHAR(10) FOREIGN KEY REFERENCES Assessment(AssessmentID),
-	Semester VARCHAR(20),
+	AssessmentID VARCHAR(10) FOREIGN KEY REFERENCES Assessment(AssessmentID),	
 	Score FLOAT
-	PRIMARY KEY (StudentID, AssessmentID, Semester)
-)
 
+	PRIMARY KEY (StudentID, AssessmentID)
+)
 
 CREATE TABLE Class(
 	ClassID VARCHAR(20) PRIMARY KEY,
 	ClassName VARCHAR(50),
-	CourseID VARCHAR(10) FOREIGN KEY REFERENCES Course(CourseID)
+	CourseID VARCHAR(10) FOREIGN KEY REFERENCES Course(CourseID),
+	Semester VARCHAR(20)
 )
 
 
