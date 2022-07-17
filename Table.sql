@@ -1,0 +1,61 @@
+Create Database DBIslot3
+use DBIslot3
+
+CREATE TABLE Student(
+	StudentID VARCHAR(10) PRIMARY KEY,
+	StudentName NVARCHAR(100) NOT NULL
+)
+
+
+CREATE TABLE Course(
+	CourseID VARCHAR(10) PRIMARY KEY,
+	CourseName NVARCHAR(100) NOT NULL
+)
+
+
+CREATE TABLE Assessment(
+	AssessmentID VARCHAR(10) PRIMARY KEY,
+	CourseID VARCHAR(10) FOREIGN KEY REFERENCES Course(CourseID),
+	AssessmentName VARCHAR(50) NOT NULL,
+	[Weight] FLOAT NOT NULL
+)
+
+
+
+CREATE TABLE Student_Assessment(
+	StudentID VARCHAR(10) FOREIGN KEY REFERENCES Student(StudentID),
+	AssessmentID VARCHAR(10) FOREIGN KEY REFERENCES Assessment(AssessmentID),
+	Semester VARCHAR(20),
+	Score FLOAT
+	PRIMARY KEY (StudentID, AssessmentID, Semester)
+)
+
+
+CREATE TABLE Class(
+	ClassID VARCHAR(20) PRIMARY KEY,
+	ClassName VARCHAR(50),
+	CourseID VARCHAR(10) FOREIGN KEY REFERENCES Course(CourseID)
+)
+
+
+CREATE TABLE Enroll(
+	ClassID VARCHAR(20) FOREIGN KEY REFERENCES Class(ClassID),
+	StudentID VARCHAR(10) FOREIGN KEY REFERENCES Student(StudentID),
+	PRIMARY KEY (ClassID, StudentID)
+)
+
+
+CREATE TABLE [Session](
+	SesssionID VARCHAR(50) PRIMARY KEY,
+	ClassID VARCHAR(20) FOREIGN KEY REFERENCES Class(ClassID)
+)
+
+
+
+
+CREATE TABLE Attendance(
+	SesssionID VARCHAR(50) FOREIGN KEY REFERENCES [Session](SesssionID),
+	StudentID VARCHAR(10) FOREIGN KEY REFERENCES Student(StudentID),
+	[Status] BIT,
+	PRIMARY KEY (SesssionID, StudentID)
+)
