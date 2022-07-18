@@ -1,0 +1,170 @@
+
+
+INSERT INTO Course VALUES
+('DBI202','Introduction to Databases'),
+('CSD201','Data Structures and Algorithms')
+
+
+
+INSERT INTO Assessment VALUES
+('DBI202 Lab', 'DBI202', 'Lab', 0.1),
+('DBI202 PT', 'DBI202', 'Progress Test', 0.1),
+('DBI202 Asm', 'DBI202', 'Assignment', 0.2),
+('DBI202 PE', 'DBI202', 'Practice Exam', 0.3),
+('DBI202 FE', 'DBI202', 'Final Exam', 0.3),
+('CSD201 Asm', 'CSD201', 'Asm', 0.2),
+('CSD201 PT', 'CSD201', 'Progress Test', 0.2),
+('CSD201 PE', 'CSD201', 'Practice Exam', 0.3),
+('CSD201 FE', 'CSD201', 'Final Exam', 0.3)
+
+
+INSERT INTO Student VALUES 
+('001', 'Nguyen Hai Duong'),
+('002', 'Nguyen Duc Anh'),
+('003', 'Nguyen Van Huy'),
+('004', 'Le Tuan Duc'),
+('005', 'Ha Van Quang')
+
+
+INSERT INTO Class VALUES
+('SE1601 DBI202', 'SE1601','SU22', 'DBI202'),
+('SE1602 DBI202', 'SE1602','SU22', 'DBI202'),
+('SE1601 CSD201', 'SE1601','SU22', 'CSD201'),
+('SE1602 CSD201', 'SE1601','SU22', 'CSD201')
+
+
+
+
+INSERT INTO Enroll(ClassID, StudentID)  VALUES
+('SE1601 DBI202', '001'),
+('SE1601 DBI202', '003'),
+('SE1601 DBI202', '005'),
+('SE1602 DBI202', '002'),
+('SE1602 DBI202', '004'),
+('SE1601 CSD201', '001'),
+('SE1601 CSD201', '002'),
+('SE1602 CSD201', '003'),
+('SE1602 CSD201', '004'),
+('SE1602 CSD201', '005')
+
+INSERT INTO [Session] VALUES
+('SE1601 DBI202 Session 1', 'SE1601 DBI202'),
+('SE1601 DBI202 Session 2', 'SE1601 DBI202'),
+('SE1601 DBI202 Session 3', 'SE1601 DBI202'),
+('SE1601 DBI202 Session 4', 'SE1601 DBI202'),
+('SE1601 DBI202 Session 5', 'SE1601 DBI202'),
+('SE1601 CSD201 Session 1', 'SE1601 CSD201'),
+('SE1601 CSD201 Session 2', 'SE1601 CSD201'),
+('SE1601 CSD201 Session 3', 'SE1601 CSD201'),
+('SE1601 CSD201 Session 4', 'SE1601 CSD201'),
+('SE1601 CSD201 Session 5', 'SE1601 CSD201'),
+('SE1602 DBI202 Session 1', 'SE1602 DBI202'),
+('SE1602 DBI202 Session 2', 'SE1602 DBI202'),
+('SE1602 DBI202 Session 3', 'SE1602 DBI202'),
+('SE1602 DBI202 Session 4', 'SE1602 DBI202'),
+('SE1602 DBI202 Session 5', 'SE1602 DBI202'),
+('SE1602 CSD201 Session 1', 'SE1602 CSD201'),
+('SE1602 CSD201 Session 2', 'SE1602 CSD201'),
+('SE1602 CSD201 Session 3', 'SE1602 CSD201'),
+('SE1602 CSD201 Session 4', 'SE1602 CSD201'),
+('SE1602 CSD201 Session 5', 'SE1602 CSD201')
+
+INSERT INTO Attendance VALUES
+('SE1601 DBI202 Session 1', '001', 1),
+('SE1601 DBI202 Session 1', '003', 1),
+('SE1601 DBI202 Session 1', '005', 1),
+('SE1601 DBI202 Session 2', '001', 1),
+('SE1601 DBI202 Session 2', '003', 0),
+('SE1601 DBI202 Session 2', '005', 1),
+('SE1601 DBI202 Session 3', '001', 1),
+('SE1601 DBI202 Session 3', '003', 1),
+('SE1601 DBI202 Session 3', '005', 0),
+('SE1601 DBI202 Session 4', '001', 1),
+('SE1601 DBI202 Session 4', '003', 0),
+('SE1601 DBI202 Session 4', '005', 1),
+('SE1601 DBI202 Session 5', '001', 1),
+('SE1601 DBI202 Session 5', '003', 1),
+('SE1601 DBI202 Session 5', '005', 1),
+('SE1602 DBI202 Session 1', '002', 1),
+('SE1602 DBI202 Session 1', '004', 1),
+('SE1602 DBI202 Session 2', '002', 1),
+('SE1602 DBI202 Session 2', '004', 0),
+('SE1602 DBI202 Session 3', '002', 1),
+('SE1602 DBI202 Session 3', '004', 1),
+('SE1602 DBI202 Session 4', '002', 1),
+('SE1602 DBI202 Session 4', '004', 1),
+('SE1602 DBI202 Session 5', '002', 1),
+('SE1602 DBI202 Session 5', '004', 0),
+('SE1601 CSD201 Session 1', '001', 1),
+('SE1601 CSD201 Session 1', '002', 0),
+('SE1601 CSD201 Session 2', '001', 1),
+('SE1601 CSD201 Session 2', '002', 1),
+('SE1601 CSD201 Session 3', '001', 1),
+('SE1601 CSD201 Session 3', '002', 1),
+('SE1601 CSD201 Session 4', '001', 1),
+('SE1601 CSD201 Session 4', '002', 1),
+('SE1601 CSD201 Session 5', '001', 1),
+('SE1601 CSD201 Session 5', '002', 0),
+('SE1602 CSD201 Session 1', '003', 1),
+('SE1602 CSD201 Session 1', '004', 1),
+('SE1602 CSD201 Session 1', '005', 1),
+('SE1602 CSD201 Session 2', '003', 1),
+('SE1602 CSD201 Session 2', '004', 1),
+('SE1602 CSD201 Session 2', '005', 1),
+('SE1602 CSD201 Session 3', '003', 0),
+('SE1602 CSD201 Session 3', '004', 1),
+('SE1602 CSD201 Session 3', '005', 1),
+('SE1602 CSD201 Session 4', '003', 1),
+('SE1602 CSD201 Session 4', '004', 1),
+('SE1602 CSD201 Session 4', '005', 1),
+('SE1602 CSD201 Session 5', '003', 1),
+('SE1602 CSD201 Session 5', '004', 1),
+('SE1602 CSD201 Session 5', '005', 0)
+
+
+INSERT INTO Student_Assessment VALUES('001','DBI202 Lab',9),
+('001','DBI202 PT',10),
+('001','DBI202 Asm',9),
+('001','DBI202 PE',10),
+('001','DBI202 FE',9),
+('001','CSD201 PT',10),
+('001','CSD201 Asm',10),   
+('001','CSD201 PE',8),
+('001','CSD201 FE',8),
+('002','DBI202 Lab',8),
+('002','DBI202 PT',7),
+('002','DBI202 Asm',7),
+('002','DBI202 PE',8),
+('002','DBI202 FE',8),
+('002','CSD201 PT',8),
+('002','CSD201 Asm',7),
+('002','CSD201 PE',8),
+('002','CSD201 FE',7),
+('003','DBI202 Lab',9),
+('003','DBI202 PT',7),
+('003','DBI202 Asm',7),
+('003','DBI202 PE',8),
+('003','DBI202 FE',8),
+('003','CSD201 PT',5),
+('003','CSD201 Asm',4),
+('003','CSD201 PE',2),
+('003','CSD201 FE',5),
+('004','DBI202 Lab',6),
+('004','DBI202 PT',9),
+('004','DBI202 Asm',8),
+('004','DBI202 PE',0),
+('004','DBI202 FE',6),
+('004','CSD201 PT',8),
+('004','CSD201 Asm',6),
+('004','CSD201 PE',8),
+('004','CSD201 FE',3),
+('005','DBI202 Lab',9),
+('005','DBI202 PT',9),
+('005','DBI202 Asm',9),
+('005','DBI202 PE',9),
+('005','DBI202 FE',9),
+('005','CSD201 PT',9),
+('005','CSD201 Asm',8),
+('005','CSD201 PE',8),
+('005','CSD201 FE',8)
+
