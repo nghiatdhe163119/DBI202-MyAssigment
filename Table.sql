@@ -1,15 +1,16 @@
 Create Database DBIslot3
 use DBIslot3
-
+drop database DBIslot3
 CREATE TABLE Student(
 	StudentID VARCHAR(10) PRIMARY KEY,
 	StudentName NVARCHAR(100) NOT NULL
 )
 
-
+drop table Course
 CREATE TABLE Course(
 	CourseID VARCHAR(10) PRIMARY KEY,
-	CourseName NVARCHAR(100) NOT NULL
+	CourseName NVARCHAR(100) NOT NULL,
+	
 )
 
 
